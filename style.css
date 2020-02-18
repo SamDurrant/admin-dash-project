@@ -43,6 +43,10 @@ body {
   transform: translateY(-1px);
 }
 
+.current:active {
+  transform: translateY(0);
+}
+
 .search-input {
   background: transparent;
   border: none;
@@ -84,6 +88,9 @@ body {
 }
 
 @media (max-width: 768px) {
+  /* 
+  Media Queries for sidebar and top-navbar change them from position fixed to position static so that navbar is not covered on small screens
+  */
   .sidebar {
     position: static;
     height: auto;
@@ -94,3 +101,15 @@ body {
   }
 }
 /* end  of navbar */
+
+/* cards */
+.card-common {
+  box-shadow: 1px 2px 5px #999;
+  transition: all .3s ease-in-out;
+}
+
+.card-common:hover {
+  box-shadow: 2px 3px 15px #999;
+  transform: translateY(-1px);
+}
+/* end of cards */
