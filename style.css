@@ -87,18 +87,14 @@ body {
   border-radius: 50%;
 }
 
-@media (max-width: 768px) {
-  /* 
-  Media Queries for sidebar and top-navbar change them from position fixed to position static so that navbar is not covered on small screens
-  */
-  .sidebar {
-    position: static;
-    height: auto;
-  }
+.pagination-center {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
 
-  .top-navbar {
-    position: static;
-  }
+.pagination-center > * {
+  width: fit-content;
 }
 /* end  of navbar */
 
@@ -119,3 +115,34 @@ body {
   border-left: 3px solid #f66436;
 }
 /* end of task list */
+
+/* tables */
+#itemTable {
+  font-size: .8rem;
+}
+/* end of tables */
+
+
+
+
+/* media queries */
+@media (max-width: 768px) {
+  /* 
+  Media Queries for sidebar and top-navbar change them from position fixed to position static so that navbar is not covered on small screens
+  */
+  .sidebar {
+    position: static;
+    height: auto;
+  }
+
+  .top-navbar {
+    position: static;
+  }
+}
+
+@media (max-width: 1000px) {
+  .pagination-center {
+    flex-direction: column;
+  }
+}
+/* end of media queries */

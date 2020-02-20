@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="title icon" href="images/title-img.png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.css"/>
     <!-- <script defer src="https://use.fontawesome.com/releases/v5.0.13/js/all.js" integrity="sha384-xymdQtn1n3lH2wcu0qhcdaOpQwyoarkgLVxC/wZ5q7h9gHtxICrpcaSUfygqZGOe" crossorigin="anonymous"></script> -->
     <script src="https://kit.fontawesome.com/d13f232e62.js" crossorigin="anonymous"></script>
     <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
@@ -204,7 +205,7 @@
         <div class="row mb-5">
           <div class="col-xl-10 col-lg-9 col-md-8 ml-auto">
             <div class="row align-items-center">
-              <div class="col-xl-6 col-12 mb-4">
+              <div class="col-xl-5 col-12 mb-4">
                 <h3 class="text-muted text-center mb-4 mb-xl-0">Staff Salary</h3>
                 <table class="table bg-light text-center">
                   <thead>
@@ -297,95 +298,10 @@
                 </nav>
                 <!-- end of pagination -->
               </div>
-              <div class="col-xl-6 col-12 mb-4">
-                <h3 class="text-muted text-center">Recent Payments</h3>
-                <table class="table table-dark table-hover text-center">
-                  <thead>
-                    <tr class="text-muted">
-                      <th>#</th>
-                      <th>Name</th>
-                      <th>Price</th>
-                      <th>Date</th>
-                      <th>Status</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <th>1</th>
-                      <th>Monica</th>
-                      <th>$2000</th>
-                      <th>25/05/2020</th>
-                      <th><span class="badge badge-success w-75 py-2">Approved</span></th>
-                    </tr>
-                    <tr>
-                      <th>2</th>
-                      <th>Nick</th>
-                      <th>$1960</th>
-                      <th>25/05/2020</th>
-                      <th><span class="badge badge-danger w-75 py-2">Pending</span></th>
-                    </tr>
-                    <tr>
-                      <th>3</th>
-                      <th>Alex</th>
-                      <th>$2520</th>
-                      <th>25/05/2020</th>
-                      <th><span class="badge badge-danger w-75 py-2">Pending</span></th>
-                    </tr>
-                    <tr>
-                      <th>4</th>
-                      <th>Andrew</th>
-                      <th>$2500</th>
-                      <th>25/05/2020</th>
-                      <th><span class="badge badge-success w-75 py-2">Approved</span></th>
-                    </tr>
-                    <tr>
-                      <th>5</th>
-                      <th>Jane</th>
-                      <th>$3200</th>
-                      <th>25/05/2020</th>
-                      <th><span class="badge badge-success w-75 py-2">Approved</span></th>
-                    </tr>
-                    <tr>
-                      <th>5</th>
-                      <th>Kate</th>
-                      <th>$1900</th>
-                      <th>25/05/2020</th>
-                      <th><span class="badge badge-danger w-75 py-2">Pending</span></th>
-                    </tr>
-                  </tbody>
+              <div class="col-xl-7 col-12 mb-4 align-items-center">
+                <h3 class="text-muted text-center">Recent Items</h3>
+                <table class="table table-dark table-hover text-center" id="itemTable" style="width: 100%">
                 </table>
-
-                <!-- pagination -->
-                <nav>
-                  <ul class="pagination justify-content-center">
-                    <li class="page-item">
-                      <a href="#" class="page-link py-2 px-3">
-                        <span>Previous</span>
-                      </a>
-                    </li>
-                    <li class="page-item active">
-                      <a href="#" class="page-link py-2 px-3">
-                        1
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a href="#" class="page-link py-2 px-3">
-                        2
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a href="#" class="page-link py-2 px-3">
-                        3
-                      </a>
-                    </li>
-                    <li class="page-item">
-                      <a href="#" class="page-link py-2 px-3">
-                        <span>Next</span>
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-                <!-- end of pagination -->
               </div>
             </div>
           </div>
@@ -699,9 +615,10 @@
     <!-- end of footer -->
   
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/bs4/dt-1.10.20/datatables.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+    <script type="module" src="script.js"></script>
   </body>
 </html>
 
